@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('Deploy') {
+      steps {
+        sh 'docker-compose -f docker-compose-delpoy.yml up --build -d'
+      }
+    }
+
   }
 }
