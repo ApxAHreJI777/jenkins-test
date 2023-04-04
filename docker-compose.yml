@@ -1,0 +1,8 @@
+version: "3"
+services:
+  jenkinstest:
+    container_name: jenkinstest
+    build: ./
+    environment: 
+      APP_MSG: "hello from environment"
+    restart: always
