@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile'
-    }
-
-  }
+  agent any
   stages {
-    stage('test') {
+    stage('Checkout code') {
       steps {
-        sh 'python -m unittest'
+        git(url: 'https://github.com/ApxAHreJI777/jenkins-test', branch: 'master')
       }
     }
 
